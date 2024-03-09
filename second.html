@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaza</title>
+</head>
+<body>
+    <button onclick="b1()">Change Image</button>
+    <button onclick="b2()">Back to the original Image</button>
+    <br><br>
+    <img id="original" src="images/image1.jpg" alt="original image (sun)" width="400">
+    
+    <script>
+        var displayed = 'orig';
+        function b1() {
+            if (displayed === 'orig') {
+                document.getElementById("original").src = "images/image2.jpg";
+                displayed = 'notOrig';
+            } else {
+                document.getElementById("original").src = "images/image1.jpg";
+                displayed = 'orig';
+            }
+        }
+        function b2() {
+            document.getElementById("original").src = "images/image1.jpg";
+            displayed = 'orig';
+        }
+    </script>
+</body>
+</html>
